@@ -1,0 +1,71 @@
+:root {
+    --primary-dark: #1e3a8a;
+    --primary-blue: #2563eb;
+    --accent-blue: #3b82f6;
+    --light-blue-bg: #f0f7ff;
+    --item-bg: #f8fafc;
+    --text-dark: #1e293b;
+    --border-blue: #bfdbfe;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.15);
+    border: 1px solid var(--border-blue);
+    max-width: 500px;
+    width: 100%;
+    padding: 32px;
+}
+
+h1 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-blue);
+    padding-bottom: 12px;
+}
+
+/* Subtítulo (primer párrafo) */
+.container>p:first-of-type {
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    background-color: var(--light-blue-bg);
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+/* Filas de información */
+.container>p:not(:first-of-type) {
+    margin: 10px 0;
+    padding: 12px 16px;
+    background-color: var(--item-bg);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.container>p:not(:first-of-type):hover {
+    background-color: var(--light-blue-bg);
+    transform: translateX(4px);
+}
